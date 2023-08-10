@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/4c536a6bd5.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./index.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Library</h1>
+            <nav>
+                <div class="lds-dual-ring active" id="loadingRing"></div>
+                <div class="logged-out" id="loggedOut">
+                    <button class="btn" id="logInBtn">Log in</button>
+                </div>
+                <div class="logged-in" id="loggedIn">
+                    <button class="btn" id="accountBtn">Account</button>
+                    <button class="btn" id="loggedOutBtn">Log out</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main container">
+        <button class="btn btn-add" id="addBookBtn">+ Add book</button>
+        <div class="books-grid" id="booksGrid"></div>
+    </main>
+    
+
+    <footer class="footer">
+        <p>
+          Copyright ©
+          <script>
+            document.write(new Date().getFullYear())
+          </script>
+          Kaylayshi
+        </p>
+      </footer>
+
+
+      <div class="modal" id="addBookModal">
+        <form action="#" class="add-book-form" id="addBookForm">
+            <h3>Add new book</h3>
+            <input type="text" class="input" id="title" placeholder="Title" required maxlength="100">
+            <p class="error-msg" id="errorMsg">error msg</p>
+            <input type="text" class="input" id="author" placeholder="Author" required maxlength="100">
+            <input type="number" class="input" id="pages" placeholder="Pages" required maxlength="1000">
+            
+            <div class="is-read">
+                <label for="isRead">Have you read it?</label>
+                <input type="checkbox" class="checkbox" id="isRead">
+            </div>
+
+            <button class="btn btn-light-green" type="submit">Submit</button>
+        </form>
+      </div>
+      <div class="overlay" id="overlay"></div>
+
+</body>
+</html>
